@@ -14,8 +14,8 @@ const page = () => {
       <h1 className='text-center mt-8 font-bold text-3xl'>Admission Form</h1>
       <div className='my-container'>
         <form className='w-full gap-5 mt-10 flex flex-col' onSubmit={handleSubmit(pushData)}>
-          <div className='w-full flex gap-5'>
-            <label className="form-control w-full max-w-[50%]">
+          <div className='w-full flex gap-5 wrap-at-550'>
+            <label className="form-control w-full max-w-[50%] hundred">
               <div className="label">
                 <span className="label-text">Full Name</span>
               </div>
@@ -24,7 +24,7 @@ const page = () => {
                 {errors.fullName && <span className="text-red-500">This field is required</span>}
               </div>
             </label>
-            <label className="form-control w-full max-w-[50%]">
+            <label className="form-control w-full max-w-[50%] hundred">
               <div className="label">
                 <span className="label-text">Father Name</span>
               </div>
@@ -34,8 +34,8 @@ const page = () => {
               </div>
             </label>
           </div>
-          <div className='w-full flex gap-5'>
-            <label className="form-control w-full max-w-[50%]">
+          <div className='w-full flex gap-5 wrap-at-550'>
+            <label className="form-control w-full max-w-[50%] hundred">
               <div className="label">
                 <span className="label-text">Email</span>
               </div>
@@ -44,7 +44,7 @@ const page = () => {
                 {errors.email && <span className="text-red-500">This field is required</span>}
               </div>
             </label>
-            <label className="form-control w-full max-w-[50%]">
+            <label className="form-control w-full max-w-[50%] hundred">
               <div className="label">
                 <span className="label-text">Phone Number</span>
               </div>
@@ -54,8 +54,8 @@ const page = () => {
               </div>
             </label>
           </div>
-          <div className='w-full flex gap-5'>
-            <label className="form-control w-full max-w-[50%]">
+          <div className='w-full flex gap-5 wrap-at-550'>
+            <label className="form-control w-full max-w-[50%] hundred">
               <div className="label">
                 <span className="label-text">National ID (CNIC)</span>
               </div>
@@ -64,7 +64,7 @@ const page = () => {
                 {errors.cnic && <span className="text-red-500">This field is required</span>}
               </div>
             </label>
-            <label className="form-control w-full max-w-[50%]">
+            <label className="form-control w-full max-w-[50%] hundred">
               <div className="label">
                 <span className="label-text">Date of Birth</span>
               </div>
@@ -74,12 +74,12 @@ const page = () => {
               </div>
             </label>
           </div>
-          <div className='w-full flex gap-5'>
-            <label className="form-control w-full max-w-[50%]">
+          <div className='w-full flex gap-5 wrap-at-550'>
+            <label className="form-control w-full max-w-[50%] hundred">
               <div className="label">
                 <span className="label-text">Gender</span>
               </div>
-              <select {...register("gender", {required: true})} className="select select-bordered">
+              <select {...register("gender", { required: true })} className="select select-bordered">
                 <option value={'male'} defaultValue>Male</option>
                 <option value={'female'}>Female</option>
                 <option value={'attackHelicopter'}>Attack Helicopter</option>
@@ -88,11 +88,11 @@ const page = () => {
                 {errors.gender && <span className="label-text-alt">This field is required</span>}
               </div>
             </label>
-            <label className="form-control w-full max-w-[50%]">
+            <label className="form-control w-full max-w-[50%] hundred">
               <div className="label">
                 <span className="label-text">Do you have a Laptop?</span>
               </div>
-              <select {...register("isLaptop", {required: true})} className="select select-bordered">
+              <select {...register("isLaptop", { required: true })} className="select select-bordered">
                 <option value={'yes'} defaultValue>Yes</option>
                 <option value={'no'}>No</option>
                 <option value={'planToBuy'}>Plan to buy</option>
@@ -116,7 +116,7 @@ const page = () => {
               <div className="label">
                 <span className="label-text">Last Qualification</span>
               </div>
-              <select {...register("qualification", {required: true})} className="select select-bordered">
+              <select {...register("qualification", { required: true })} className="select select-bordered">
                 <option value={'matric'} defaultValue>Matric</option>
                 <option value={'intermediate'}>Intermediate</option>
                 <option value={'bachelors'}>Bachelors</option>
@@ -130,13 +130,16 @@ const page = () => {
               <div className="label">
                 <span className="label-text">Profile Image</span>
               </div>
-              <input type="file" className="file-input file-input-bordered w-full" {...register("pfp", {required: true})}/>
+              <input type="file" className="file-input file-input-bordered w-full" {...register("pfp", { required: true })} />
               <div className="label">
                 {errors.pfp && <span className="text-red-500">This field is required</span>}
               </div>
+              <div>
+                <ul className="list-disc mt-5 ml-5"><li>With white or blue background</li><li>File type: jpg, jpeg, png</li><li>Upload your recent passport size picture</li><li>Your face should be clearly visible without any glasses</li></ul>
+              </div>
             </label>
           </div>
-          <button type="submit" class="btn btn-primary mb-10">Submit</button>
+          <button type="submit" className="btn btn-primary mb-10">Submit</button>
         </form>
       </div>
     </div>
