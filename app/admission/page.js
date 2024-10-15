@@ -11,8 +11,8 @@ const page = () => {
   return (
     <div>
       <Toggle />
-      <h1 className='text-center mt-8 font-bold text-3xl'>Admission Verification</h1>
-      <div className='my-container'>
+      <h1 className='text-center mt-8 font-bold text-3xl animate__animated animate__fadeIn'>Admission Verification</h1>
+      <div className='my-container animate__animated animate__fadeIn'>
         <form className='w-full mt-10 flex flex-col' onSubmit={handleSubmit(pushData)}>
           <div className='w-full flex'>
             <label className="form-control w-full">

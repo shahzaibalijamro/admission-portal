@@ -11,8 +11,8 @@ const page = () => {
   return (
     <div>
       <Toggle />
-      <h1 className='text-center mt-8 font-bold text-3xl'>Admission Form</h1>
-      <div className='my-container'>
+      <h1 className='text-center mt-8 font-bold text-3xl animate__animated animate__fadeIn'>Admission Form</h1>
+      <div className='my-container animate__animated animate__fadeIn'>
         <form className='w-full gap-5 mt-10 flex flex-col' onSubmit={handleSubmit(pushData)}>
           <div className='w-full flex gap-5 wrap-at-550'>
             <label className="form-control w-full max-w-[50%] hundred">

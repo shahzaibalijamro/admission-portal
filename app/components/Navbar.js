@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-primary text-primary-content">
+        <div className="navbar animate__animated animate__fadeInDown bg-primary text-primary-content">
             <div className='flex w-full px-4 justify-between items-center'>
                 <button className="btn text-secondary hover:bg-transparent p-1 btn-ghost text-xl">Innovatrix Academy</button>
                 <label className="swap swap-rotate">
