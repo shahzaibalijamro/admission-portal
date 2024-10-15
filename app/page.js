@@ -1,6 +1,6 @@
 "use client"
 import { useForm } from 'react-hook-form'
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import Toggle from './components/Toggle'
 
 const page = () => {
